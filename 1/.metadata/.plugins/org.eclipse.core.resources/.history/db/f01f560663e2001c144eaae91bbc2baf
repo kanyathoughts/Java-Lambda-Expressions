@@ -1,0 +1,19 @@
+package demo;
+
+import java.util.function.Consumer;
+
+public class ConsumerDemo2 {
+
+	public static void main(String[] args) {
+		
+		Consumer<String> c1 = n -> System.out.println(n + " " + "is white.");
+		Consumer<String> c2 = n -> System.out.println(n + " " + "has four legs.");
+		Consumer<String> c3 = n -> System.out.println(n + " " + "is eating grass.");
+		
+		c1.accept("cow");
+		c2.accept("cow");
+		c3.accept("cow");
+
+	}
+
+}

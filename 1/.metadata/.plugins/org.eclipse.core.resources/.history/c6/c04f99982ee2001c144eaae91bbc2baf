@@ -1,0 +1,24 @@
+package demo;
+
+import java.util.function.Predicate;
+
+public class PredicateDemo3 {
+
+	public static void main(String[] args) {
+		
+		//joining predicates by "and", "or", "negate"
+		
+		
+		Predicate<Integer> p1 = value -> value >20;
+		Predicate<Integer> p2 = value -> value.
+
+	}
+	
+	public static boolean isEven(int v) {
+		if ((v%2) == 0) {
+			return true;
+		}
+		return false;
+	}
+
+}

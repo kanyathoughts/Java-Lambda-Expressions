@@ -1,0 +1,27 @@
+package demo;
+
+import java.util.function.Predicate;
+
+public class PredicateDemo {
+
+	public static void main(String[] args) {
+		
+		//Ex1
+		Predicate<Integer> p = i -> (i > 10);   //predicate takes only one argument (eg: i)
+		System.out.println(p.test(20)); //true
+		System.out.println(p.test(5)); //false
+		
+		//Ex2
+		Predicate<String> s = line -> line.contains("Kanya") && line.contains("Buddi") && line.length() > 4;
+		System.out.println(s.test("Kanya Buddi"));  //true
+		
+		//Ex3: Print array elements whose size > 4
+		String names[] = {"Kanya", "Buddi"};
+		Predicate<String[]> n = name -> name.length > 4;
+ 		System.out.println(n.test(names));
+ 		
+		
+
+	}
+
+}

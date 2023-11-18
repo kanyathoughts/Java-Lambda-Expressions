@@ -1,0 +1,16 @@
+package demo;
+
+@FunctionalInterface
+interface Cab {
+	public void cab();
+}
+
+public class Demo1 {
+	
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

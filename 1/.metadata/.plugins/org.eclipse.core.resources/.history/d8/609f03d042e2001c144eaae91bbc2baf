@@ -1,0 +1,9 @@
+package demo;
+
+public class FunctionDemo3 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

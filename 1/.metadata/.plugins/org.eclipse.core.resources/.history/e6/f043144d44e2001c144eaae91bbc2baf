@@ -1,0 +1,13 @@
+package demo;
+
+
+//Function chaining concept
+//1.andThen()
+//2.compose()
+public class FunctionDemo3 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

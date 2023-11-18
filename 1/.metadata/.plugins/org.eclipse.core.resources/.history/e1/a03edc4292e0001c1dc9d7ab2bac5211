@@ -1,0 +1,26 @@
+package demo;
+
+@FunctionalInterface
+interface Cab {
+	public void cab();
+}
+
+public class Ola implements Cab {
+
+	@Override
+	public void cab() {
+		System.out.println("Ola cab booked...");
+		
+	}
+	
+}
+
+public class Demo1 {
+	
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

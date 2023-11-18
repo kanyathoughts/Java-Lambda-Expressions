@@ -1,0 +1,38 @@
+package demo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+
+public class ConsumerDemo1 {
+
+	public static void main(String[] args) {
+
+		Consumer<String> c1 = value -> System.out.println(value);
+		c1.accept("Jashwitha");
+		
+		List<Employee> l = new ArrayList<>();
+		l.add(new Employee("Buddi", 50000, 5));
+		l.add(new Employee("Chitti", 30000, 10));
+		l.add(new Employee("Daddy", 20000, 30));
+		
+		Function<Employee, Integer> f = n -> n.salary*10/100;
+		Predicate<Integer> p = n -> n>2000;
+		Consumer<Employee> c2 = n -> {
+			System.out.println(n.ename);
+			System.out.println(n.salary);
+			System.out.println(n.experience);
+		};
+		for (Employee e:l) {
+			int bonus = f.apply(e);
+			if (p.test(bonus)) {
+				c2.accept(e);
+				System.out.println("bonus is: " + bonus);
+			}
+		}
+		
+	}
+
+}

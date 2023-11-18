@@ -1,0 +1,23 @@
+package demo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
+public class FunctionDemo2 {
+
+	public static void main(String[] args) {
+		Function<Employee, Integer> f1 = n -> 110*n.salary/100;
+		
+		List<Employee> l = new ArrayList<>();
+		l.add(new Employee("Buddi", 50000, 5));
+		l.add(new Employee("Chitti", 70000, 10));
+		l.add(new Employee("Daddy", 40000, 30));
+		
+		for (Employee value: l) {
+			System.out.println(f1.apply(value));
+		}
+
+	}
+
+}

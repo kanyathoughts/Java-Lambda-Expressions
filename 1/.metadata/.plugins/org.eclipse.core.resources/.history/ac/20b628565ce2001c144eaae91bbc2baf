@@ -1,0 +1,28 @@
+package demo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
+public class ConsumerDemo1 {
+
+	public static void main(String[] args) {
+
+		Consumer<String> c1 = value -> System.out.println(value);
+		c1.accept("Jashwitha");
+		
+		List<Employee> l = new ArrayList<>();
+		l.add(new Employee("Buddi", 50000, 5));
+		l.add(new Employee("Chitti", 30000, 10));
+		l.add(new Employee("Daddy", 20000, 30));
+		
+		
+		Consumer<Employee> c2 = n -> {
+			int bonus = n.salary *10/100;
+			System.out.println(bonus);
+			
+		};
+		
+	}
+
+}

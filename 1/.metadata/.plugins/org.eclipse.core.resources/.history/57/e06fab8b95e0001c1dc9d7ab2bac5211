@@ -1,0 +1,36 @@
+package demo;
+
+@FunctionalInterface
+interface Cab {
+	public void cab();
+}
+
+/*class Ola implements Cab {
+
+	@Override
+	public void cab() {
+		System.out.println("Ola cab booked...");
+		
+	}
+	
+	
+}*/
+
+public class Demo1 {
+	
+
+	public static void main(String[] args) {
+		/*Ola o1 = new Ola();  //You can create objects from Class
+		o1.cab();
+		
+		Cab o2 = new Ola(); //You can create objects from parent interface also
+		o2.cab(); */
+		
+		Cab o3 = () -> System.out.println("Ola cab booked... and waiting to arrive");  //directly we are implementing the abstract methods through Lambda
+		o3.cab();
+		
+		
+
+	}
+
+}
